@@ -57,6 +57,7 @@ def test_ellipse_geom():
     assert c1.major == 1
     assert c1.hradius == 1
     assert c1.vradius == 1
+    assert Circle(Point(1, 1), 0) == Point(1, 1)
 
     # Private Functions
     assert hash(c1) == hash(Circle(Point(1, 0), Point(0, 1), Point(0, -1)))

@@ -1356,6 +1356,9 @@ class Circle(Ellipse):
             # Assume (center, radius) pair
             c = Point(args[0], dim=2)
             r = sympify(args[1])
+            # If radius is zero, then return a point
+            if r == 0:
+                return c
 
         if not (c is None or r is None):
             return GeometryEntity.__new__(cls, c, r, **kwargs)
